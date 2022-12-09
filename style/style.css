@@ -2,7 +2,7 @@
     height: 100vh;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(1, 1fr) repeat(1, 4fr);
+    grid-template-columns: repeat(1, 1fr) repeat(1, 3fr);
     grid-template-rows: repeat(1, 1fr) repeat(1, 5fr);
 }
 
@@ -17,11 +17,101 @@
     grid-column-start: 1;
     grid-row-start: 1;
     grid-row-end: 6;
+    display: grid;
+    grid-template-rows: repeat(1, 1fr) repeat(1, 3fr) repeat(1, 1fr);
+}
+
+.wrap1 {
+    appearance: none;
+    text-decoration: none;
+    color: white;
+    grid-row-start: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.dash {
+    appearance: none;
+    text-decoration: none;
+    color: white;
+}
+
+.home { 
+    appearance: none;
+    text-decoration: none;
+    color: white;
+}
+
+.house {
+    width: 30px;
+}
+
+.wrap {
+    appearance: none;
+    text-decoration: none;
+    grid-row-start: 2;
+    display: flex;
+    flex-direction: column;
+   
+    gap: 20px;
+    text-align: left;
+}
+
+.menu {
+    appearance: none;
+    text-decoration: none;
+    color: white;
+    
+   text-align: left;
+}
+
+.wrap2 {
+    appearance: none;
+    text-decoration: none;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.set {
+    appearance: none;
+    text-decoration: none;
+    color: white;
+    text-align: left;
+
 }
 
 .search {
     background-color: rgb(255, 255, 255);
     grid-column-start: 2;
-    grid-column-end: 5;
     grid-row-start: 1;
+    box-shadow: .1em .1em .1em black;
+    display: grid;
+    grid-template-columns: repeat(1, 2fr) repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.bar {
+border-radius: 20px;
+height: 40%;
+width: 80%;
+}
+
+.btnwrap {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.btn {
+    border-radius: 50%;
+    width: 15%;
+    height: 90%;
+
 }
