@@ -6,14 +6,184 @@
     grid-template-rows: repeat(1, 1fr) repeat(1, 5fr);
 }
 
+/*article containers and text*/
 .articles {
-    background-color: rgb(98, 98, 101);
+    background-color: #c4c5ba;
     grid-column-start: 2;
+    grid-row-start: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr) repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+
+}
+
+.Ann {
+   position: relative;
+   bottom: 585px;
+   right: 100px;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    font-size: 1.5em;
+    font-weight: 800;
+
+}
+
+#box {
+    border-radius: 20px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr) repeat(1, 9fr);
+        grid-template-rows: repeat(1, 3fr) repeat(1, 1fr);
+        gap: 2rem 1rem;
+        position: relative;
+        top: 25px;
+      }
+
+
+#box:hover {
+    transform: 2em 2em 2em;
+    background-color: blue;
+}
+
+.sq1 {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    background-color: white;
+    width: 80%;
+    height: 80%;
+    display: grid;
+}
+
+.fancy {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: 4;
+  background: white;
+  background: linear-gradient(#009fff, #ec2f4b);
+  border-radius: 20px 0 0 20px;
+  width: 75%;
+}
+
+.int {
+    grid-column-start: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    right: 20px;
+    gap: 20px
+}
+
+.soc {
+    width: 25px;
+}
+
+.text {
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+
+.sq2 {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    background-color: white;
+    width: 80%;
+    height: 80%;
+}
+
+.sq3 {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    background-color: white;
+    width: 80%;
+    height: 80%;
+}
+
+.sq4 {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    background-color: white;
+    width: 80%;
+    height: 80%;
+}
+
+.sq5 {
+    grid-column-start: 1;
+    grid-row-start: 3;
+    background-color: white;
+    width: 80%;
+    height: 80%;
+}
+
+.sq6 {
+    grid-column-start: 2;
+    grid-row-start: 3;
+    background-color: white;
+    width: 80%;
+    height: 80%;
+}
+
+.socials {
+    position: relative;
+    grid-column-start: 3;
+    grid-row-start: 1;
+    grid-row-end: 4;
+   display: grid;
+   grid-template-columns: repeat(1, 1fr);
+   grid-template-rows: repeat(2, 1fr);
+   gap: 30px
+}
+
+/*current problem with this setup is that these boxes will not adjust with the screen size unlesss I adjust the overall gridlayout...I think ...someone else made it adapt to a mobile screen once it got too big for its briches*/
+.ann {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    width: 200px;
+    height: 200px; /*if set to percentages itll fit whatever is inside and stop. Maybe create the content that will go inside to prop it up? */
+    background-color: white;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.trend {
     grid-row-start: 2;
 }
 
+ .Announcement-border {
+    width: 100%;
+    height: 1px;
+    background-color: lightgray;
+  }
+
+.news {
+    grid-row-start: 1;
+    color: black;
+    background-color: yellow;
+}
+
+.news1 {
+    grid-row-start: 2;
+    color: black;
+    background-color: yellow;
+}
+
+.news2 {
+    grid-row-start: 3;
+    color: black;
+    background-color: yellow;
+}
+
+.trend{ 
+    width: 150px;
+    height: 200px;
+    background-color: white;
+    display: flex;
+}
+
 .sidebar {
-    background-color: rgb(74, 146, 223);
+    background-color: #233451;
     grid-column-start: 1;
     grid-row-start: 1;
     grid-row-end: 6;
@@ -43,7 +213,9 @@
 }
 
 .house {
-    width: 30px;
+    width: 3em;
+    height: 3em;
+    
 }
 
 .wrap {
@@ -85,7 +257,7 @@
 }
 
 .search {
-    background-color: rgb(255, 255, 255);
+    background-color: #9e826f    ;
     grid-column-start: 2;
     grid-row-start: 1;
     box-shadow: .1em .1em .1em black;
@@ -96,22 +268,107 @@
 
 .bar {
 border-radius: 20px;
-height: 40%;
-width: 80%;
+height: 30%;
+width: 90%;
+position: relative;
+left: -530px;
+top: 10px
+}
+
+.mag {
+    height: 35px;
+    position: relative;
+    left: 25px;
+    top: 10px;
+}
+
+.profile {
+    grid-column-start: 3;
+    grid-row-start: 1;
+    position: relative;
+    right: 100px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    top: 10px;
+    display: flex;
+}
+
+.persona {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+   }
+
+.bigprofile {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    position: relative;
+    display: flex;
+    left: 20px;
+    bottom: 10px;
+}
+
+.welcome {
+    font-family: 'Courier New', Courier, monospace;
+    position: relative;
+    top: 10px;
+    left: 15px
+}
+
+.user {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    font-weight: 500;
 }
 
 .btnwrap {
     grid-column-start: 2;
     grid-column-end: 4;
     grid-row-start: 2;
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(20px, .3fr));
+
+    position: relative;
+    bottom: -30px;
 }
 
-.btn {
-    border-radius: 50%;
-    width: 15%;
-    height: 90%;
+.btn{
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+    border-radius:20%;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#FFFFFF;
+    text-align:center;
+    transition: all 0.2s;
+    background-color: #ecb477;
+    height: 2rem;
+    width: 5rem
+    }
 
+    .btn:hover{
+    color:#000000;
+    background-color:#fabc7b
+    ;
+    }
+
+    @media all and (max-width:30em){
+    .btn {
+    display:flex;
+    margin:0.4em auto;
+    }
+    }
+
+
+.small {
+    width: 50px;
+}
+
+.big{ 
+    width: 80px;
 }
