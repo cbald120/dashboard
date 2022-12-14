@@ -13,20 +13,22 @@
     grid-row-start: 2;
     display: grid;
     grid-template-columns: repeat(2, 2fr) repeat(1, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    justify-items: center;
-    align-items: center;
-
+    grid-template-rows: repeat(1, 1fr) repeat(3, 6fr);
+   justify-items: center; /*this is centering the announcents stuff too*/
+    align-items: center; 
+    position: relative;
 }
 
 .Ann {
+    grid-column-start: 1;
+    grid-row-start: 1;
    position: relative;
-   bottom: 585px;
-   right: 100px;
     font-family: 'Courier New', Courier, monospace;
     color: black;
-    font-size: 1.5em;
+    font-size: 1.8em;
     font-weight: 800;
+    top: 20px;
+    right: 50px
 
 }
 
@@ -37,7 +39,7 @@
         grid-template-rows: repeat(1, 3fr) repeat(1, 1fr);
         gap: 2rem 1rem;
         position: relative;
-        top: 25px;
+        box-shadow: .1em .1em .1em black;
       }
 
 
@@ -48,7 +50,7 @@
 
 .sq1 {
     grid-column-start: 1;
-    grid-row-start: 1;
+    grid-row-start: 2;
     background-color: white;
     width: 80%;
     height: 80%;
@@ -87,7 +89,7 @@
 
 .sq2 {
     grid-column-start: 2;
-    grid-row-start: 1;
+    grid-row-start: 2;
     background-color: white;
     width: 80%;
     height: 80%;
@@ -95,7 +97,7 @@
 
 .sq3 {
     grid-column-start: 1;
-    grid-row-start: 2;
+    grid-row-start: 3;
     background-color: white;
     width: 80%;
     height: 80%;
@@ -103,7 +105,7 @@
 
 .sq4 {
     grid-column-start: 2;
-    grid-row-start: 2;
+    grid-row-start: 3;
     background-color: white;
     width: 80%;
     height: 80%;
@@ -111,7 +113,7 @@
 
 .sq5 {
     grid-column-start: 1;
-    grid-row-start: 3;
+    grid-row-start: 4;
     background-color: white;
     width: 80%;
     height: 80%;
@@ -119,7 +121,7 @@
 
 .sq6 {
     grid-column-start: 2;
-    grid-row-start: 3;
+    grid-row-start: 4;
     background-color: white;
     width: 80%;
     height: 80%;
@@ -127,28 +129,106 @@
 
 .socials {
     position: relative;
+    top: -50px;
     grid-column-start: 3;
-    grid-row-start: 1;
+    grid-row-start: 2;
     grid-row-end: 4;
    display: grid;
    grid-template-columns: repeat(1, 1fr);
-   grid-template-rows: repeat(2, 1fr);
-   gap: 30px
+   grid-template-rows: repeat(1, 1fr);
+   gap: 30px;
+}
+
+header {
+    padding: 5px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+p {
+    padding: 5px;
+    font-family: 'Courier New', Courier, monospace;
+
 }
 
 /*current problem with this setup is that these boxes will not adjust with the screen size unlesss I adjust the overall gridlayout...I think ...someone else made it adapt to a mobile screen once it got too big for its briches*/
-.ann {
+.head {
     grid-column-start: 1;
     grid-row-start: 1;
-    width: 200px;
-    height: 200px; /*if set to percentages itll fit whatever is inside and stop. Maybe create the content that will go inside to prop it up? */
+   position: relative;
+    color: black;
+    font-size: 1.2em;
+    font-weight: 800;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+}
+
+.ann {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    width: 190px;
+    height: 190px; 
     background-color: white;
     display: grid;
     grid-template-rows: repeat(3, 1fr);
+    box-shadow: .1em .1em .1em black;
+    border-radius: 20px;
+    padding: 10px
+}
+
+.Trending {
+    grid-column-start: 1;
+    grid-row-start: 3;
+    position: relative;
+    color: black;
+    font-size: 1.2em;
+    font-weight: 800;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+    
 }
 
 .trend {
+    grid-column-start: 1;
+    grid-row-start: 3;
+    box-shadow: .1em .1em .1em black;
+    border-radius: 20px;
+    position: relative;
+    top: 30px
+}
+
+.trend{ 
+    grid-row-start: 3;
+    grid-row-end: 5;
+    width: 200px;
+    height: 300px; 
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr) repeat(1, 3fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.watson {
+    grid-row-start: 1;
+background-color: black;
+}
+
+.baker {
     grid-row-start: 2;
+    background-color: black;
+
+}
+
+.lestrade {
+    grid-row-start: 3;
+    background-color: black;
+
+}
+
+.pup {
+    grid-row-start: 4;
+    background-color: black; 
 }
 
  .Announcement-border {
@@ -158,30 +238,27 @@
   }
 
 .news {
+    position: inherit;
     grid-row-start: 1;
     color: black;
-    background-color: yellow;
+    border-radius: 20px;
 }
 
 .news1 {
     grid-row-start: 2;
     color: black;
-    background-color: yellow;
+    border-radius: 20px;
 }
 
 .news2 {
     grid-row-start: 3;
     color: black;
-    background-color: yellow;
+    
+    border-radius: 20px;
 }
 
-.trend{ 
-    width: 150px;
-    height: 200px;
-    background-color: white;
-    display: flex;
-}
 
+/*sidebar stuff*/
 .sidebar {
     background-color: #233451;
     grid-column-start: 1;
@@ -189,6 +266,8 @@
     grid-row-end: 6;
     display: grid;
     grid-template-rows: repeat(1, 1fr) repeat(1, 3fr) repeat(1, 1fr);
+   box-shadow:  .2em .2em .2em black;
+   align-items: center;
 }
 
 .wrap1 {
@@ -197,13 +276,29 @@
     color: white;
     grid-row-start: 1;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+   position: relative;
+   top: -60px;
+   left: 10px
 }
+
+#dash {
+    width: 4em;
+}
+
+.dish {
+    width: 4em
+}
+
 .dash {
     appearance: none;
     text-decoration: none;
     color: white;
+    font-size: 1.8rem;
+    font-weight: 800;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .home { 
@@ -222,18 +317,26 @@
     appearance: none;
     text-decoration: none;
     grid-row-start: 2;
-    display: flex;
-    flex-direction: column;
-   
+    font-family: 'Courier New', Courier, monospace;
     gap: 20px;
     text-align: left;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr) repeat(1, 5fr);
+    grid-template-rows: repeat(6, 1fr);
+    position: relative;
+    top: -250px;
+    align-items: center;
+}
+
+#home1 {
+    font-size: 1.2rem;
 }
 
 .menu {
     appearance: none;
     text-decoration: none;
     color: white;
-    
+    font-size: 1.2rem;
    text-align: left;
 }
 
@@ -245,7 +348,13 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-
+    font-family: 'Courier New', Courier, monospace;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr) repeat(1, 5fr);
+    grid-template-rows: repeat(3, 1fr);
+    position: relative;
+    top: -100px;
+    align-items: center;
 }
 
 .set {
@@ -253,6 +362,7 @@
     text-decoration: none;
     color: white;
     text-align: left;
+    font-size: 1.2rem;
 
 }
 
@@ -263,19 +373,23 @@
     box-shadow: .1em .1em .1em black;
     display: grid;
     grid-template-columns: repeat(1, 2fr) repeat(1, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr); 
 }
 
 .bar {
+    grid-column-start: 1;
+    grid-row-start: 1;
 border-radius: 20px;
 height: 30%;
 width: 90%;
 position: relative;
-left: -530px;
+left: 70px;
 top: 10px
 }
 
 .mag {
+    grid-column-start: 1;
+    grid-row-start: 1;
     height: 35px;
     position: relative;
     left: 25px;
@@ -286,19 +400,52 @@ top: 10px
     grid-column-start: 3;
     grid-row-start: 1;
     position: relative;
-    right: 100px;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 700;
+    right: 35px;
     top: 10px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(30px, .5fr));
 }
 
 .persona {
     text-decoration: none;
     color: black;
     display: flex;
-    align-items: center;
+    min-width: 20px;
+    max-width: 1fr;
+    position: relative;
+    top: 10px
    }
+
+#noti {
+    width: 2em;
+    height: auto;
+    position: relative;
+    top: 5px;
+    right: -10px;
+}
+
+.alert {
+    display: none;
+    height: 200px;
+    position: fixed;
+    z-index: 10;
+}
+
+#noti:hover + .alert {
+    display: block;
+    background-color: #394d65;
+    border-radius: 10px;
+    position: fixed;
+    z-index: 10;
+    top: 50px;
+    display: flex;
+    align-items: center;
+    border: solid .5em;
+    border-color: #233451;
+    padding: 10px
+}
 
 .bigprofile {
     grid-column-start: 1;
