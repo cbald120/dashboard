@@ -21,3 +21,5 @@ Favorite Icon by Evil Icons on IconScout
 Heart Icon by Chamestudio
 List Icon by Akveo on IconScout
 construction image by geralt on Pixabay
+watson.png by mcmurryjulie on Pixabay
+wolf.png by starsi on Pixabay
